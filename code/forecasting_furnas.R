@@ -11,7 +11,7 @@ if(length(args)>1){
   pasta_raiz <- dirname(rstudioapi::getSourceEditorContext()$path)
 }
 
-setwd("./../data/processed")
+setwd(paste0(pasta_raiz, "./../data/processed"))
 
 dados <- read_excel("dados_hidrologicos.xlsx", skip = 1, col_names = F)
 
